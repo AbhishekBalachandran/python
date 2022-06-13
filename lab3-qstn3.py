@@ -1,0 +1,7 @@
+file = open("C:\lab\python\mysample.txt","a+")
+text = str(input("Enter the text to append : \n"))
+file.write("\n")
+file.write(text)
+file = open("C:\lab\python\mysample.txt","r")
+print("File after appending : \n",file.read())
+file.close()
