@@ -1,17 +1,12 @@
-def displaysublist(A):
-    B = []
-    for i in range(len(A)+1):
-        for j in range (i+1,len(A)+1):
-            sub = A[i:j]
-            B.append(sub)
-    return B
+from itertools import count
 
-A = list()
-n =int(input("Enter the size of the list : "))
-print("Enter the elements of the list \n")
-for i in range(int(n)):
-    k = int(input(''))
-    A.append(k)
-print("Given list is ",A)
-print("Sublist is ",displaysublist(A))
 
+list = [[1,4],['one',2,3,'four'],[2,3],4,[5,6,7]]
+count = 0
+for i in list:
+    if len(i) > 1:
+        count += 1
+        print(count,". sublist of list : ",i)
+    else:
+        continue
+        
